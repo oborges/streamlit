@@ -1,11 +1,5 @@
 import streamlit as st
 
-# Create a new Streamlit app
-my_app = st.Stlit()
+st.title('Hello, World!')
+st.write('Welcome to your first Streamlit app on IBM Cloud Code Engine!')
 
-# Render the app
-my_app.run("""
-  <div>
-    <h1>Hello World</h1>
-  </div>
-""")

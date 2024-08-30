@@ -1,4 +1,0 @@
-name: my-streamlit-app
-revision: main
-source: .
-entrypoint: streamlit run app.py --no-cache
