@@ -6,13 +6,14 @@ import os
 
 # Configurações do IBM Cloud Object Storage
 COS_ENDPOINT = "https://s3.br-sao.cloud-object-storage.appdomain.cloud"  # URL do seu endpoint do COS
-#COS_API_KEY_ID = "YOUR_API_KEY"  # Substitua pela sua API Key
+COS_API_KEY_ID = os.environ['COS_API_KEY_ID']
 COS_INSTANCE_CRN = "crn:v1:bluemix:public:cloud-object-storage:global:a/dd38434108cf46bfa9849bbaa8c80aac:adfe9ea8-a98d-4257-a513-c350a23d8483::"  # Substitua pelo CRN da sua instância
 
 # Função para conectar ao IBM COS
 def connect_cos():
     cos = ibm_boto3.resource(
         "s3",
+        ibm_api_key_id=COS_API_KEY_ID,
         ibm_service_instance_id=COS_INSTANCE_CRN,
         config=Config(signature_version="oauth"),
         endpoint_url=COS_ENDPOINT,
