@@ -58,6 +58,7 @@ df = load_data_from_cos(cos, bucket_name, file_key)
 st.markdown("Teste de head do arquivo")
 st.markdown(print(df.head()))
 
+exit()
 
 # Mostrando dados filtrados
 if not df.empty:
