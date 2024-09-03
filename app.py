@@ -55,6 +55,10 @@ file_key = "PDA_Lista_Instituicoes_Ensino_Superior_do_Brasil_EMEC.csv"
 # Carregando os dados
 df = load_data_from_cos(cos, bucket_name, file_key)
 
+st.markdown("Teste de head do arquivo")
+st.markdown(print(df.head()))
+
+
 # Mostrando dados filtrados
 if not df.empty:
     filtered_df = filter_data(df)
