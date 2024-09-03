@@ -2,7 +2,7 @@
 FROM python:3.9
 
 # Instale as dependências
-RUN pip install streamlit
+RUN pip install streamlit pandas ibm_boto3
 
 # Copie o código do app
 COPY app.py /app/
