@@ -1,8 +1,3 @@
-if __name__ == '__main__':
-    import os
-    port = int(os.environ.get("PORT", 8080))
-    st.run(port=port)
-
 import streamlit as st
 
 st.title("Hello World App")
